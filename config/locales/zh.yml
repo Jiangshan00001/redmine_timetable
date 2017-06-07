@@ -1,0 +1,44 @@
+zh:
+  timetable: 时间表
+  statistics: 统计
+  permission_view_timetable: 时间表查看权限
+  permission_edit_timetable: 时间表编辑权限
+
+  description_not_sure: 期限不明
+  description_out_of_time: 期限延期
+  description_on_time: 期限3日内
+  description_in_time: 期限4日以上
+  description_closed: 已关闭
+
+  issues: 问题
+  my_issues: 我的问题
+  not_assigned_issues: 未指派问题
+  planned_issues: 已指派问题
+
+  field_is_done: 已完成
+  field_start_time: 开始时间
+  field_end_time: 结束时间
+  field_project_name: 项目名称
+  field_issue_subject: 问题标题
+  field_duration: 问题期间
+
+  edit_event: 编辑事件
+  edit_issue: 编辑问题
+  hours: 时间
+  link_to_destroy: 删除
+  link_to_ttevent_destroy: ttevent 删除
+  message_destroy_confirm: 是否确认删除?
+  notice_link_to_ttevent_destroy: 是否确认ttevent删除
+  success_create_issue_and_ttevent: 成功创建问题和ttevent
+  success_update_issue_and_ttevent: 成功更新问题和ttevent
+  error_something_went_wrong: 保存失败
+  success_destroy_ttevent: 删除ttevent成功
+
+  notice_unreported_ttevents: "unreported ttevents something wrong??"
+  notice_unreported_ttevents_none: 未报告
+
+  notice_unplanned_ttevents: "notice_unplanned_ttevents 未计划的ttevents??"
+  notice_unplanned_ttevents_none: notice_unplanned_ttevents_none 没有计划没有注册???
+
+  notice_issues_not_assigned: "notice_issues_not_assigned %{issues_not_assigned} something could not translated yet..."
+  notice_issues_not_assigned_none: notice_issues_not_assigned_none:could not translated yet...

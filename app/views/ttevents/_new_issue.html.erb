@@ -1,4 +1,11 @@
 <div id="dialog" title="new issue">
+  <form>
+   <input type='text' name='issue_id'> </input> 
+  <button type="button" class="button ok" onClick="issue_num_ok();">
+    <%= l(:button_input_num_ok) %>
+  </button>
+  </form> 
+  
   <%= form_for @issue, url: {controller: :ttevents, action: :create_issue}, remote: true do |f| %>
     <fieldset class="field box">
       <%# select project %>
@@ -47,6 +54,12 @@
   </button>
 </div>
 <script>
+
+    function issue_num_ok(){
+    $('#dialog').dialog("close");
+    $('#modal_area').html('');
+  }
+  
   function cancel(){
     $('#dialog').dialog("close");
     $('#modal_area').html('');

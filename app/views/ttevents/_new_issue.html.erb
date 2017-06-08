@@ -1,34 +1,34 @@
-<div id="dialog" title="新規チケットと新規イベント">
+<div id="dialog" title="new issue">
   <%= form_for @issue, url: {controller: :ttevents, action: :create_issue}, remote: true do |f| %>
     <fieldset class="field box">
-      <%# プロジェクト %>
+      <%# select project %>
       <p>
         <%= f.label :project_id %>
-        <%= f.select :project_id, project_tree_options_for_select(@issue.allowed_target_projects), {:required => true, prompt: '選択してください'}, onchange: 'onSelectProject();' %>
+        <%= f.select :project_id, project_tree_options_for_select(@issue.allowed_target_projects), {:required => true, prompt: 'select project'}, onchange: 'onSelectProject();' %>
       </p>
-      <%# トラッカー %>
+      <%# select tracker %>
       <p>
         <%= f.label :tracker_id %>
-        <%= f.select :tracker_id, [], {:required => true,prompt: '選択してください'} %>
+        <%= f.select :tracker_id, [], {:required => true,prompt: ' select tracker '} %>
       </p>
-      <%# サブジェクト %>
+      <% issue subject %>
       <p>
         <%= f.label :subject %>
         <%= f.text_field :subject %><br>
       </p>
-      <%# カテゴリ %>
-      <%# 期日 %>
+      <%#  due date %>
+      <%# date %>
       <p>
         <%= f.label :due_date %>
         <%= f.date_field :due_date %><br>
       </p>
 
-      <%# 親チケット %>
-      <%# バージョン %>
-      <%# 著者 %>
+      <%# comment1 %>
+      <%# comment2 %>
+      <%# author  %>
       <%= f.hidden_field :author_id, value: @current_user.id %>
-      <%# 優先度 %>
-      <%# アサイン%>
+      <%# pivot %>
+      <%#  assigned to %>
       <%= f.hidden_field :assigned_to_id, value: @current_user.id %>
       <p>
         <%= f.label :priority_id %>
@@ -61,7 +61,7 @@
         id: val 
       },
       success: function(trackers,status){
-        $('#issue_tracker_id').html($("<option>").val('').text('選択してください'));
+        $('#issue_tracker_id').html($("<option>").val('').text('select tracker '));
         trackers.forEach(function(tracker){
           $('#issue_tracker_id').append($("<option>").val(tracker.id).text(tracker.name));
         })
